@@ -1,0 +1,183 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Fast Twitch</title>
+    <script src="jquery-2.1.4.min.js"></script>
+    <style type="text/css">
+        .btn {
+ 
+          color: #000000;
+          font-size: 15px;
+          background: #A68ED2;
+         
+          text-decoration: none;
+      }
+
+      .btn:hover {
+          background: #6441A5;
+          text-decoration: none;
+      }
+      body {
+        margin: 0px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        min-width: 350px;
+        border: 2px solid white;
+        text-decoration: none;
+        background-color: #F1F1F1;
+
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: white;
+      }
+      
+
+
+.box1 {
+
+
+  background-color: #A68ED2;
+ 
+  background-repeat: no-repeat;
+  background-position: center;
+  float: left;
+  width:172px;
+  height: 32px;
+  border: 1.5px solid black;
+  margin: 0px;
+}
+
+.box1 img {
+  
+  margin: auto;
+  display: block;
+}
+.box2 {
+
+  background-color: #A68ED2;
+  float: right;
+  margin: 0px;
+  width:172px;
+  border: 1.5px solid black;
+}
+.box2 img {
+  display: block;
+  margin: auto;
+}
+.buttons {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+.main {
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.left {
+  background-color: #A68ED2;
+  float: left;
+  width: 170px;
+  padding: 2px 2px 2px 2px;
+
+}
+.right {
+  position: relative;
+  background-color: #F1F1F1;
+  width: 100px;
+  right: 140px;
+  float:right;
+  text-align: center;
+ }
+.status {
+  
+  color: black;
+  margin: 0px;
+  padding: 5px 5px 5px 5px;
+}
+
+.statuses {
+  background-color: #ccbadc;
+}
+
+.settings {
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+}
+
+.delete:hover {
+  background-color:white;
+
+}
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+    <script src="background.js"></script>
+    
+  <!--</head>
+  <body>
+    <div id = "contentwrap">
+      <div class = "MyBox">
+        <ul id = "grid">
+     <li><img src = watch.png></li>
+     <li><img src = settings.png></li>
+   </ul>
+   </div>
+    </div>-->
+  <div class = "buttons">
+    <div class = "box1">
+      <img src = "watch.png">
+    </div>
+    <div class = "box2">
+      <img src = "settings.png">
+    </div>
+  </div>
+    
+  
+    <div class = "main">
+      
+     
+      <input type = "text" placeholder = "Enter Twitch Name">
+        
+     
+      <button class = "btn">Check Status</button><br><br>
+      <img src = "refresh.png" class = "refresh" alt = "refresh"></img>
+    
+ 
+      <br>
+      <br>
+    <div class = "statuses">
+
+    </div>
+   </div>
+
+   <div class = "settings">
+    <p>Notifications:</p>
+    <input type="radio"  name="notifications" value="Yes" checked>On 
+    <br>
+    <input type="radio"  name="notifications" value="No">Off
+    <br>
+
+    
+  </div>
+  </body>
+</html>
+
